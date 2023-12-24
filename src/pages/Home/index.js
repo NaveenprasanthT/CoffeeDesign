@@ -1,8 +1,11 @@
 import React from 'react';
+import FAQ from '../../common/Components/faq';
 
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+      <FAQ />
+    </div>
   );
 }
 

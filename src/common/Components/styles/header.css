@@ -1,0 +1,56 @@
+.header-wrap{
+  padding: 0 3%;
+}
+
+.header-wrap h1{
+  position: relative;
+  font-size: 28px;
+  padding-left: 15px;
+}
+
+.header-wrap h1::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 32px;
+  background-color: var(--primary-color);
+}
+
+.header-container{
+  margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title-container{
+  position: relative;
+}
+
+.title-container h2{
+  width: max-content;
+  font-size: 36px;
+  text-transform: capitalize;
+}
+
+.title-container h2 span{
+  color: var(--primary-color);
+}
+
+.underline{
+  width: auto;
+  height: 7px;
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+}
+
+.header-container p{
+  font-size: 22px;
+  color: var(--desc-color);
+}

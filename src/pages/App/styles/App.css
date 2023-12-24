@@ -1,0 +1,14 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'SF Pro Display', sans-serif;
+  color: #121212;
+}
+
+:root{
+  --primary-color:#D4002A;
+  --background-black:#292929;
+  --desc-color: #7070707e;
+}

@@ -1,0 +1,21 @@
+.btn-wrap{
+  padding: 10px 25px;
+  width: max-content;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-wrap p{
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.btn-wrap span{
+  display: flex;
+}
