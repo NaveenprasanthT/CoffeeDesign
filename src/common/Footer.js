@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/image/logo.png';
 import frame from '../assets/image/frame.png';
 import './styles/footer.css';
-import { FacebookIcon, InstagramIcon, LinkedInIcon, YoutubeIcon } from './svgIcon';
+import { FacebookIcon, InstagramIcon, LinkedInIcon, RoundArrow, YoutubeIcon } from './svgIcon';
 import TouchButton from './Components/Button';
 
 function Footer() {
@@ -26,8 +26,9 @@ function Footer() {
         <h1>Request More Information</h1>
         <p>Lorem ipsum dolor sit amet consectetur. Egestas dictum vitae nisi praesent enim.</p>
         <TouchButton
+          label="Get In Touch"
           clickFunction={handleClick}
-          arrow
+          arrow={<RoundArrow />}
         />
         <div className="rights">© 2023 Coffee Design Studio</div>
         <div className="onlyBorder"></div>
