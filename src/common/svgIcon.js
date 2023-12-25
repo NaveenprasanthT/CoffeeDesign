@@ -44,3 +44,11 @@ export function RoundArrow() {
     </svg>
   );
 }
+
+export function DropDownArrow() {
+  return (
+    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.5858 19.3352L5.89797 8.64502L4.27156 10.2737L16.5858 22.588L28.9023 10.2737L27.2736 8.64502L16.5858 19.3352Z" fill="black" />
+    </svg>
+  );
+}

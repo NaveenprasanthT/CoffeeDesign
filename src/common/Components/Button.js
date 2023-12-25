@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { RoundArrow } from '../svgIcon';
 import './styles/button.css';
 
 function TouchButton(props) {
   return(
-    <div className="btn-wrap" onClick={props?.clickFunction}>
-      <p>Get In Touch</p>
-      {props?.arrow && <span><RoundArrow /></span>}
-    </div>
+    <button className="btn-wrap" onClick={props?.clickFunction}>
+      <p>{props?.label}</p>
+      {props?.arrow && <span>{props?.arrow}</span>}
+    </button>
   );
 }
 
