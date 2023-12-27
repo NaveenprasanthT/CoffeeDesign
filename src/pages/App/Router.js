@@ -9,7 +9,7 @@ function WrapperRoutes() {
     <div>
       <Navbar />
       <Outlet />
-      <Footer />
+      <Footer /> 
     </div>
   );
 }

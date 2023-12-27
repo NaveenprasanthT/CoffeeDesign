@@ -1,0 +1,10 @@
+.about-container {
+  margin: 2% 3%;
+  display: flex;
+  border-radius: 15px;
+  background: #292929;
+}
+
+.about-l h1{
+    color: white;
+}
