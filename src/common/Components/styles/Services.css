@@ -9,6 +9,8 @@
   justify-content: center;
   width: 100%;
   margin: 5% 0;
+  gap: 46px;
+  flex: 1;
 }
 
 .services-card {
@@ -16,8 +18,8 @@
   flex-direction: column;
   border-radius: 16.269px;
   border: 2.169px solid #ffe8ea;
-  padding: 2% 4.5%;
-  margin-right: 42px;
+  padding: 2% 6% 2% 3.5%;
+  /* margin-right: 42px; */
   transition: all 0.5s ease;
 }
 
@@ -36,8 +38,13 @@
   border-radius: 50%;
 }
 
-.s-title {
+.s-title{
+  width: fit-content;
+}
+
+.s-title h1{
   color: black;
+  width: 100%;
   font-weight: 700;
   margin: 20px 0;
   font-size: 26.031px;
@@ -61,7 +68,9 @@
 .s-link {
   display: flex;
   margin: 20px 0;
-  gap: 8px;
+  gap: 10px;
+  border-bottom: 1px solid #d4002a;
+  width: fit-content;
 }
 .s-link a {
   color: #d4002a;
@@ -70,6 +79,7 @@
   align-items: center;
   justify-content: center;
   font-size: 21.692px;
+  text-decoration: none;
 }
 .s-link span {
   display: flex;

@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import "./styles/Services.css";
-import { PaintIcon, RoundArrow,ArrowIcon, Arrow} from "../svgIcon";
+import { PaintIcon,ArrowIcon, Arrow} from "../svgIcon";
 
 const Services = () => {
   const cardData = [
@@ -39,9 +39,12 @@ const Services = () => {
       />
       <div className="services-wrap">
         {cardData.map((card) => (
+          
           <div className="services-card">
             <div className="s-icon">{card.icon}</div>
-            <div className="s-title">{card.title}</div>
+            <div className="s-title">
+              <h1>{card.title}</h1>
+            </div>
             {card.values.map((value) => (
               <div className="s-contents">
                 <span><ArrowIcon stroke={2}/></span>
