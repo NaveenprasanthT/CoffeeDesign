@@ -3,6 +3,7 @@ import FAQ from '../../common/Components/faq';
 import HeaderSection from './Components/HeaderSection';
 import Services from '../../common/Components/Services';
 import Aboutus from '../../common/Components/Aboutus';
+import Card from '../../common/Components/Card';
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <Services />
       <Aboutus />
       <FAQ />
+      <Card />
     </div>
   );
 }
