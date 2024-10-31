@@ -13,8 +13,7 @@ const Aboutus = () => {
       <div className="about-container">
         <div className="about-l">
           <h1>
-            Passionate about <span>design</span> & <span>development,</span> we{" "}
-            <br />
+            Passionate about <span>design</span> & <span>development,</span> we
             craft innovative solutions that bring ideas to life. Welcome to
             creativity redefined.
           </h1>
@@ -26,12 +25,6 @@ const Aboutus = () => {
           </a>
         </div>
         <div className="about-r">
-          <div className="r-title">
-            <h1>
-              A global digital <br />
-              media company
-            </h1>
-          </div>
           <div className="about-img">
             <img src={circle} alt="circle" />
             <div className="about-logo">
@@ -40,6 +33,12 @@ const Aboutus = () => {
           </div>
           <div className="about-bg">
             <img src={about} alt="about-us icon" />
+            <div className="r-title">
+              <h1>
+                A global digital <br />
+                media company
+              </h1>
+            </div>
           </div>
         </div>
       </div>
