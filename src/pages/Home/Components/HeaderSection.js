@@ -75,7 +75,9 @@ function HeaderSection() {
         </div>
         <img src={headerImg} alt="header" className="section-image" />
       </div>
-      <ReactPlayer
+      { 1 === 0 &&
+      <>
+       <ReactPlayer
         height='500px'
         width='500px'
         url='https://signage-cms-dev.s3.ap-south-1.amazonaws.com/user-content/1729620251156.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4OW5LNEKECZFZPXM%2F20241031%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20241031T065930Z&X-Amz-Expires=86400&X-Amz-Signature=628112dd2410f98fbdb65679408e5f0b702b9d1696bb262cbdcb39077b4bc598&X-Amz-SignedHeaders=host'
@@ -90,6 +92,7 @@ function HeaderSection() {
         onChange={handleChange}
         defaultValue={0}
       />
+      </>}
     </>
   );
 }
