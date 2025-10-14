@@ -20,46 +20,58 @@ function Footer() {
           </div>
 
           <nav className="social" aria-label="Social links">
-            <a
-              href="https://facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="social-link"
-            >
-              <FacebookIcon color="#D4002A" />
-              <span>Facebook</span>
-            </a>
-            <a
-              href="https://twitter.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              className="social-link"
-            >
-              <TwitterIcon color="#D4002A" />
-              <span>Twitter</span>
-            </a>
-            <a
-              href="https://dribbble.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Dribbble"
-              className="social-link"
-            >
-              <DribbbleIcon color="#D4002A" />
-              <span>Dribbble</span>
-            </a>
-            <a
-              href="https://www.behance.net/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Behance"
-              className="social-link"
-            >
-              <BehanceIcon color="#D4002A" />
-              <span>Behance</span>
-            </a>
+            <div>
+              <a
+                href="https://facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="social-link"
+              >
+                <FacebookIcon color="#D4002A" />
+                <span>Facebook</span>
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                className="social-link"
+              >
+                <TwitterIcon color="#D4002A" />
+                <span>Twitter</span>
+              </a>
+            </div>
+
+            <div>
+              {" "}
+              <a
+                href="https://dribbble.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Dribbble"
+                className="social-link"
+              >
+                <DribbbleIcon color="#D4002A" />
+                <span>Dribbble</span>
+              </a>
+            </div>
+
+            <div>
+              {" "}
+              <a
+                href="https://www.behance.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Behance"
+                className="social-link"
+              >
+                <BehanceIcon color="#D4002A" />
+                <span>Behance</span>
+              </a>
+            </div>
           </nav>
         </header>
 

@@ -90,7 +90,7 @@
     justify-content: space-between;
     align-items: end;
     gap: 10px;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
   }
 }
 

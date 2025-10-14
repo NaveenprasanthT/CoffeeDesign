@@ -1,4 +1,4 @@
-.about-wrap{
+.about-wrap {
   height: 80vh;
 }
 
@@ -52,7 +52,7 @@
   position: relative;
 }
 
-.about-img{
+.about-img {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,27 +60,58 @@
   top: -70px;
   right: -40px;
 }
-.about-logo{
+.about-logo {
   position: absolute;
 }
 
-.about-bg{
+.about-bg {
   position: absolute;
   top: 48%;
-  right: 40px;
+  right: 140px;
 }
 
 .r-title {
   position: absolute;
-  top: -80px;
+  top: 0;
   background-color: var(--primary-color);
-  left: -120px;
-  border-radius: 21.984px 21.984px 21.984px 0px;
+  left: -250px;
+  border-radius: 50px;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 .r-title h1 {
   color: white;
   width: 100%;
   font-size: 25px;
-  padding: 56px 34px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.arrow-right-icon {
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* 🔥 Hover Effect */
+.r-title:hover {
+  background-color: #db1a1a; /* or a lighter/darker shade of your primary color */
+  transform: scale(1.05);
+}
+
+.r-title:hover h1 {
+  transform: translateX(5px);
+}
+
+.r-title:hover .arrow-right-icon {
+  transform: translateX(5px);
+}
+.arrow-02-icon{
+  position: absolute;
+  left: -150px;
+  bottom: 10px;
 }

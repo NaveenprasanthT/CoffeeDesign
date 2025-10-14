@@ -3,8 +3,9 @@ import { Outlet, Route, Routes } from "react-router-dom";
 import Home from "../Home";
 import Navbar from "../../common/Components/Navbar/index";
 import Footer from "../../common/Footer";
-import Aboutus from "../../common/Components/Aboutus";
 import ServicesPages from "../Services";
+import AboutPages from "../About";
+import ContactPage from "../Contact";
 
 function WrapperRoutes() {
   return (
@@ -21,8 +22,10 @@ function Router() {
     <Routes>
       <Route path="/" element={<WrapperRoutes />}>
         <Route index element={<Home />} />
-        <Route path="about" element={<Aboutus />} />
+        <Route path="about" element={<AboutPages />} />
         <Route path="services" element={<ServicesPages />} />
+        <Route path="contact" element={<ContactPage />} />
+        
       </Route>
     </Routes>
   );

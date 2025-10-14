@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles/services-section.css";
-import servicesImage from "../../../assets/development-images.jpg"; // replace with your image
+import servicesImage from "../../../assets/image/development-images.jpg"; // replace with your image
 import { ServiceCard } from "../../../common/Components/ServiceCard";
 import { ReactComponent as AboutUsIcon } from "../../../assets/about-us-icon.svg";
 import StatsSection from "../../../common/Components/StatsSection ";

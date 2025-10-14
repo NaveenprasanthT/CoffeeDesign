@@ -1,33 +1,92 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import "./navbar.css";
 
 const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <header className="nav-wrapper" role="banner" aria-label="Primary">
       <div className="nav-inner">
         {/* Brand */}
         <div className="nav-brand">
-          <div className="nav-logo">
-            <img src={logo} alt="Coffee Design logo" />
-          </div>
-
+          <img src={logo} alt="Coffee Design logo" className="nav-logo" />
         </div>
 
-        {/* Navigation Links */}
-        <nav className="nav-links" aria-label="Main navigation">
-          <Link to="/" className="nav-link active">Home</Link>
-          <Link to="/works" className="nav-link">Works</Link>
-          <Link to="/about" className="nav-link">About</Link>
-          <Link to="/services" className="nav-link">Services</Link>
-          <Link to="/pricing" className="nav-link">Pricing</Link>
-        </nav>
+        {/* Hamburger for mobile */}
+        <button
+          className="nav-toggle"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle navigation"
+        >
+          <span className="hamburger"></span>
+          <span className="hamburger"></span>
+          <span className="hamburger"></span>
+        </button>
 
-        {/* CTA */}
-        <Link to="/contact" className="nav-cta" aria-label="Contact">
-          Contact
-        </Link>
+        {/* Navigation Links */}
+        <nav
+          className={`nav-links ${isMobileMenuOpen ? "active" : ""}`}
+          aria-label="Main navigation"
+        >
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/works"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Works
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/services"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Services
+          </NavLink>
+          <NavLink
+            to="/pricing"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Pricing
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className="nav-cta"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Contact
+          </NavLink>
+        </nav>
       </div>
     </header>
   );

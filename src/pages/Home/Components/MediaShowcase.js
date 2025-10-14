@@ -1,5 +1,5 @@
 import React from "react";
-import VideoImage from "../../../assets/video-images.png";
+import VideoImage from "../../../assets/image/video-images.png";
 import { ReactComponent as PlayIcon } from "../../../assets/play-icon.svg";
 import { ReactComponent as LuminaIcon } from "../../../assets/lumina-icon.svg";
 import { ReactComponent as VortexIcon } from "../../../assets/vortex-icon.svg";

@@ -2,8 +2,8 @@ import React from "react";
 import ProjectCard from "../../../common/Components/ProjectCard ";
 import CreativeDesignSection from "../../../common/Components/CreativeDesignSection ";
 import { ReactComponent as AboutUsIcon } from "../../../assets/about-us-icon.svg";
-import Made3D from "../../../assets/3d-made-images.png";
-import Atomize from "../../../assets/Atomize-image.png";
+import Made3D from "../../../assets/image/3d-made-images.png";
+import Atomize from "../../../assets/image/Atomize-image.png";
 
 function Showcasing() {
   const projects = [

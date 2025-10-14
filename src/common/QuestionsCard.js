@@ -7,8 +7,8 @@ function QuestionsCard() {
     <div>
       <CreativeDesignSection
         icon={<AboutUsIcon />}
-        title="What We Do Our Projects"
-        heading="Creative Design Agency to provide solutions"
+        title="FAQ’s"
+        heading="Have questions?"
         align="start"
       />{" "}
       <FAQ />

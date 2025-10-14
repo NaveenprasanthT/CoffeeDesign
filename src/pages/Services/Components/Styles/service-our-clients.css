@@ -1,0 +1,13 @@
+.services-our-clients-pages {
+  background-color: #f8f8f8;
+  padding-bottom: 5%;
+  margin: 5%;
+  border-radius: 12px;
+}
+
+.services-our-clients-about-us{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+}

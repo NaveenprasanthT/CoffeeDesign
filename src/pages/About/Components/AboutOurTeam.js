@@ -3,7 +3,7 @@ import CreativeDesignSection from "../../../common/Components/CreativeDesignSect
 import { ReactComponent as AboutUsIcon } from "../../../assets/about-us-icon.svg";
 import AvatarCircle from "../../../common/Components/AvatarCircle";
 import ourTeam from "../../../assets/image/ourTeam01.jpg";
-function OurTeam() {
+function AboutOurTeam() {
   const team = [
     { src: ourTeam, name: "Maya Unzip", role: "Designer" },
     { src: ourTeam, name: "Maya Unzip", role: "Developer" },
@@ -16,8 +16,7 @@ function OurTeam() {
       <CreativeDesignSection
         icon={<AboutUsIcon />}
         title="What We Do Our Projects"
-        heading="Creative Design Agency to provide solutions"
-        description="Our belief system says that effective design"
+        heading="Our Team Curating Excellence from Creativity."
       />{" "}
       <div className="tt-team-grid">
         {team.map((member, index) => (
@@ -33,4 +32,4 @@ function OurTeam() {
   );
 }
 
-export default OurTeam;
+export default AboutOurTeam;
