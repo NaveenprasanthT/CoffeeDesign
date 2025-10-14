@@ -1,0 +1,85 @@
+.logo-brand-section {
+  padding: 2rem 8%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.logo-brand-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.logo-brand-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #f5dcdc;
+  border-radius: 12px;
+  padding:1rem;
+  width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.logo-brand-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+
+
+.logo-brand-card-header .dot {
+  width: 8px;
+  height: 8px;
+  background-color: #2196f3;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.logo-brand-card-header h3 {
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: 600;
+}
+
+.logo-brand-card-description {
+  color: #777;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  flex: 1;
+  line-height: 1.5;
+  width: 250px;
+}
+.log-title{
+    margin-top: 10px;
+    width:150px;
+}
+
+.logo-brand-arrow-btn {
+  background: #3B3B3B;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  width: 50px;
+  height: 35px;
+  display: flex;
+  cursor: pointer;
+  transition: 0.3s;
+  position: absolute;
+  right: 10px;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-arrow-right{
+
+}
+.logo-brand-arrow-btn:hover {
+  background: #000;
+}

@@ -1,0 +1,13 @@
+.services-card-pages-main {
+  margin: 5%;
+}
+.services-card-pages-images {
+  width: 100%;
+  max-height: 464px;
+}
+.services-card-development {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5%;
+}

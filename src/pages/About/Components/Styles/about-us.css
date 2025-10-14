@@ -1,0 +1,43 @@
+.services-about-us {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  padding: 0 5%;
+  text-align: start;
+  align-items: start;
+  gap: 20px;
+}
+
+.services-about-us-heading {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #626262;
+}
+
+/* ✅ Tablet */
+@media (max-width: 1024px) {
+  .services-about-us {
+    grid-template-columns: 1fr; /* stack in one column */
+    padding: 0 5%;
+  }
+
+  .services-about-us-heading {
+    padding-top: 0;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+/* ✅ Mobile */
+@media (max-width: 600px) {
+  .services-about-us {
+    padding: 0 3%;
+    text-align: start;
+  }
+
+  .services-about-us-heading {
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 10px;
+  }
+}

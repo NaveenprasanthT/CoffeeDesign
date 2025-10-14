@@ -1,0 +1,131 @@
+:root {
+  --text: #1a1a1a;
+  --muted: #8a8a8a;
+  --line: #e6e6e6;
+  --line-hover: #333333;
+  --brand: #d2042d; /* vivid red for the CTA */
+  --brand-hover: #b40326;
+  --bg: #ffffff;
+}
+
+.contact-form {
+  color: var(--text);
+  background: var(--bg);
+  margin: 5%;
+  padding: 0 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.form-input {
+  border: none;
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0 12px 0;
+  background: transparent;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--text);
+  transition: border-color 0.2s ease;
+}
+
+.form-input::placeholder {
+  color: transparent; /* minimalist look */
+}
+
+.form-input:focus {
+  outline: none;
+  border-bottom-color: var(--line-hover);
+}
+
+.full-width {
+  width: 100%;
+}
+
+.form-message-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.form-label {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.form-input {
+  border: none;
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0 12px 0;
+  background: transparent;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--text);
+  transition: border-color 0.2s ease;
+}
+
+.form-input::placeholder {
+  color: transparent; /* minimalist look */
+}
+
+.form-input:focus {
+  outline: none;
+  border-bottom-color: var(--line-hover);
+}
+
+.form-textarea {
+  resize: vertical;
+  max-height: 20px;
+}
+
+.form-cta {
+  margin-top: 5%;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  border-radius: 9999px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background-color 160ms ease;
+}
+
+.form-cta:hover,
+.form-cta:focus-visible {
+  background: var(--brand-hover);
+}
+
+.form-arrow {
+  font-size: 18px;
+  line-height: 1;
+  transform: translateY(1px);
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 900px) {
+  .form-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}

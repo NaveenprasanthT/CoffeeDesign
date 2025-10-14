@@ -1,0 +1,75 @@
+/* =============== Team Grid =============== */
+.tt-team-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  overflow: auto;
+  margin-top: 4%;
+  padding-right: 15%;
+  padding-left: 35%;
+}
+.tt-team-grid::-webkit-scrollbar {
+  display: none;
+}
+/* =============== Avatar =============== */
+.tt-avatar {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.tt-avatar-img {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  display: block;
+}
+
+.tt-avatar-caption {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.tt-avatar-name {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+  line-height: 27px;
+  text-indent: 2px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.tt-avatar-role {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  text-indent: 2px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #454545; /* or var(--tt-muted) if you use CSS variables */
+}
+
+/* =============== Testimonials Grid =============== */
+.tt-testimonial-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .tt-testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .tt-testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

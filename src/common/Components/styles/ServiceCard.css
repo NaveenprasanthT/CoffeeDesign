@@ -1,0 +1,71 @@
+/* ServiceCard.css */
+
+.service-card {
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-number {
+  font-weight: 300;
+  font-style: Light;
+  font-size: 50px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #696969;
+  margin-bottom: 30px;
+}
+
+.service-title {
+  margin-top: 330px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33.6px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #02050a; /* dark color */
+  margin: 0;
+}
+
+.service-description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #696969;
+}
+
+.service-arrow {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #9ca3af; /* gray */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.service-arrow:hover {
+  background-color: #f97316; /* brand color */
+  color: #fff;
+}
+
+.border-style {
+  width:590px;
+  height: 1px;
+  background-color: #02050a1a;
+}
