@@ -1,0 +1,146 @@
+.media-showcase {
+  text-align: center;
+  font-weight: 500;
+  font-style: normal; /* "Medium" is not valid; use normal, italic, or oblique */
+  letter-spacing: 0;
+  background: radial-gradient(
+    ellipse 100% 20% at top center,
+    rgba(254, 207, 216, 1) 50%,
+    rgba(254, 207, 216, 0) 100% /* fully transparent at bottom */
+  );
+}
+
+.showcase-video-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  height: 575px;
+  opacity: 1;
+  border-radius: 20px;
+}
+
+.hero-image {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  color: #0077ff;
+  border-radius: 50%;
+  padding: 10px 10px 5px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.play-button:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: #0077ff;
+  color: white;
+}
+
+.trusted-text {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 17px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #333333;
+  margin: 20px 0px;
+}
+
+.brands {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  font-weight: 500;
+  color: #3d3d3d;
+}
+.brands-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.brands-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.brands-border {
+  width: 1px;
+  height: 23px;
+  margin-left: 20px;
+  background-color: #ccc;
+}
+.ratings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.rating-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rating-icon {
+  font-size: 36px;
+  background: #f6f7f9;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.rating-info {
+  text-align: left;
+}
+
+.rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  border: 1px solid #f6f7f9;
+  border-radius: 12px;
+  padding-left: 10px;
+}
+
+.rating-count {
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 15px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #666666;
+  background: #f6f7f9;
+  padding: 3px 10px;
+  border-radius: 12px;
+  border: 1px solid #f6f7f9;
+  outline: 1px solid #f6f7f9;
+}
+.rating-number {
+  margin-left: 5px;
+  font-weight: 600;
+  color: #222;
+}
+
+.rating-subtext {
+  display: block;
+  font-size: 13px;
+  color: #666;
+}

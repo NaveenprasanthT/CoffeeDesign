@@ -1,0 +1,190 @@
+/* ===========================
+   Header SECTION STYLES
+=========================== */
+.hero-section {
+  position: relative;
+  padding: 6rem 1rem;
+  text-align: center;
+  background-color: #fecfd8;
+  overflow: visible;
+}
+
+.abstract-design-icon {
+  position: absolute;
+  top: -110px;
+  left: 37%;
+  overflow: visible;
+  z-index: 9999;
+}
+.hero-bg-decor {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, #e0e0e0 0%, transparent 70%);
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-container {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* Badge */
+.spots-badge-container {
+  position: relative;
+  margin-bottom: 5px;
+}
+.spots-badge-bordder {
+  position: absolute;
+  left: 38%;
+  top: 16px;
+  width: 250px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1) 5%,
+    /* 10% opacity */ rgba(255, 255, 255, 1) 20%,
+    /* 20% opacity */ rgba(255, 255, 255, 1) 30%,
+    /* 30% opacity */ rgba(255, 255, 255, 1) 70%,
+    /* 70% opacity */ rgba(255, 255, 255, 1) 80%,
+    /* 80% opacity */ rgba(255, 255, 255, 0.1) 90%,
+    /* 90% opacity */ rgba(255, 255, 255, 0) 100% /* 100% opacity */
+  );
+}
+
+.spots-badge {
+  display: inline-flex;
+  z-index: 9999;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #ffe1e8; /* light pink background */
+  border: 2px solid #fff; /* white border */
+  font-weight: 600;
+  font-size: 14px;
+  color: #111;
+  position: relative;
+  outline-offset: 2px;
+  outline: 1px solid white;
+}
+
+.spots-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e; /* green dot */
+  outline: 4px solid #b4febf;
+}
+
+.spots-text {
+  white-space: nowrap;
+}
+
+/* Optional hover effect */
+.spots-badge:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+/* Title & Subtitle */
+.hero-title {
+  font-family: Cabinet Grotesk;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 60px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* CTA Button */
+.hero-actions {
+  margin-bottom: 2rem;
+}
+
+.hero-btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.hero-btn-primary:hover {
+  background: #333;
+}
+
+/* Trust Badge */
+.hero-trust {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.hero-trust-img {
+  display: block;
+}
+
+.hero-trust-text {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Stats Grid */
+.hero-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-btn-primary {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 500px) {
+  .spots-badge {
+    padding: 5px 12px;
+    font-size: 13px;
+  }
+
+  .spots-dot {
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+  }
+}

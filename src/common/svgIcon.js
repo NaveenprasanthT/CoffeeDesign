@@ -76,3 +76,43 @@ export function Arrow(props) {
 </svg>
   )
 }
+
+export function TwitterIcon({ color = "currentColor" }) {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 7.49v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+        fill={color}
+      />
+    </svg>
+  );
+}
+
+export function DribbbleIcon({ color = "currentColor" }) {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="10" stroke={color} strokeWidth="2" />
+      <path
+        d="M2.05 12.77c3.26-1.17 6.75-1.49 10.22-1.04 2.16.29 4.3.92 6.23 1.9M8.56 2.72c1.5 2.06 3.27 5.6 4.69 10.68M21.67 9.48a12.08 12.08 0 00-8.67-3.96"
+        stroke={color}
+        strokeWidth="2"
+        fill="none"
+      />
+    </svg>
+  );
+}
+
+export function BehanceIcon({ color = "currentColor" }) {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M4 7h5a3 3 0 010 6H4V7zM4 13h5a3 3 0 010 6H4v-6zM14 10h6m-6 7h7a3 3 0 00-7 0z"
+        stroke={color}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+

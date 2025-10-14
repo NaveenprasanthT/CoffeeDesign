@@ -1,0 +1,182 @@
+.about-intro {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.about-intro-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20rem;
+}
+
+.about-intro-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.about-intro-title {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 55px;
+  letter-spacing: -0.6px;
+  text-transform: capitalize;
+  color: #3b3b3b;
+}
+
+.about-intro-text {
+  margin-top: 20px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 130%;
+  color: #8d8c8c;
+  max-width: 700px;
+}
+
+.about-intro-icon {
+  margin-top: 50px;
+  width: 117px;
+  height: 117px;
+}
+
+/* ================================
+   ✅ Responsive Breakpoints
+=================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .about-intro-grid {
+    gap: 5rem;
+    padding: 0 5%;
+  }
+
+  .about-intro-title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .about-intro-text {
+    font-size: 20px;
+    max-width: 500px;
+  }
+
+  .about-intro-icon {
+    width: 90px;
+    height: 90px;
+    margin-top: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-intro-grid {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .about-intro-header {
+    justify-content: center;
+  }
+
+  .about-intro-title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .about-intro-text {
+    font-size: 18px;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .about-intro-icon {
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .about-intro-title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .about-intro-text {
+    font-size: 16px;
+  }
+
+  .about-intro-icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+.pillars-section {
+  margin-top: 100px;
+  width: 100%;
+  border-radius: 0.375rem;
+  background-color: #fff9f9;
+  padding: 50px 0;
+}
+
+.pillars-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pillars-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 100px;
+  gap: 1.5rem;
+}
+
+.pillars-title {
+  color: #a60608;
+  text-align: center;
+  margin: 0;
+  font-weight: 600;
+  font-size: 84px;
+  line-height: 100%;
+  text-transform: capitalize;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .pillars-flex {
+    padding: 0 50px;
+    gap: 1rem;
+  }
+
+  .pillars-title {
+    font-size: 60px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .pillars-flex {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 20px;
+  }
+
+  .pillars-title {
+    font-size: 40px;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .pillars-title {
+    font-size: 28px;
+  }
+}

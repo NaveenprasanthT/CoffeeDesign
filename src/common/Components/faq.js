@@ -4,10 +4,10 @@ import { DropDownArrow } from '../svgIcon';
 import './styles/faq.css';
 
 function FAQ() {
-  const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState();
   const faqData = [
     {
-      title: 'Why do businesses need Design services in Bangalore?',
+      title: 'How to import Prime into Figma?',
       desc: 'When people hear about your business, they first check your online presence. If they are not able to find it, chances are you lose customers.',
     },
     {
@@ -30,19 +30,14 @@ function FAQ() {
 
   return (
     <div className="faq-wrap">
-      <Header
-        heading="FAQ's"
-        title={<>Got <span>questions</span>? We've got the answers</>}
-        desc="Our belief system says that effective design is born from combining empathy, data, and insights"
-        underline
-      />
+
       <div className="footer-container">
         {faqData.map((item, index) => (
           <div className="each-faq">
             <div className="title-arrow"
               onClick={() => setOpen(index)}
             >
-              <h2>{item.title}</h2>
+              <h2 >{item.title}</h2>
               <span
                 style={{
                   opacity: open !== index ? '1' : '0'

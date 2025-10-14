@@ -1,54 +1,113 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../assets/image/logo.png';
-import frame from '../assets/image/frame.png';
-import './styles/footer.css';
-import { FacebookIcon, InstagramIcon, LinkedInIcon, RoundArrow, YoutubeIcon } from './svgIcon';
-import TouchButton from './Components/Button';
-
+import React from "react";
+import "./styles/footer.css";
+import {
+  FacebookIcon,
+  BehanceIcon,
+  DribbbleIcon,
+  TwitterIcon,
+} from "./svgIcon";
+import QuestionsCard from "./QuestionsCard";
+import logoImages from "../assets/image/logo.png";
 function Footer() {
-
-  const handleClick = () => {
-    console.log("Get in touch");
-  };
-
   return (
     <div className=".sectionWrap">
-      <div className="imgContent">
-        <img src={frame} alt='frame' className="contentImage" />
-        <div className="contentContainer">
-          {/* <img src='/assets/footer/vector.png' width={1000} height={1000} className="vectorImage" /> */}
-          <h1>More Than a Job, It's a  Career Path.</h1>
-        </div>
-      </div>
-      <div className="mainFooter">
-        <h5>Discovering the new narratives</h5>
-        <h1>Request More Information</h1>
-        <p>Lorem ipsum dolor sit amet consectetur. Egestas dictum vitae nisi praesent enim.</p>
-        <TouchButton
-          label="Get In Touch"
-          clickFunction={handleClick}
-          arrow={<RoundArrow />}
-        />
-        <div className="rights">© 2023 Coffee Design Studio</div>
-        <div className="onlyBorder"></div>
-        <div className="linksWrap">
-          <div className="logoContainer">
-            <img src={logo} alt='logo' className="footerLogo" />
+      <QuestionsCard />
+      <div className="contact-wrap">
+        {/* Header */}
+        <header className="contact-header">
+          <div className="contact-brand">
+            <img src={logoImages} width={361} alt="logoImages" />
           </div>
-          <div className="pageLinks">
-            <Link href='/'>Home</Link>
-            <Link href='/'>About us</Link>
-            <Link href='/'>Terms and Conditions</Link>
-            <Link href='/'>Privacy Policy</Link>
-          </div>
-          <div className="socialMedia">
-            <span><LinkedInIcon color="#FFFFFF" /></span>
-            <span><FacebookIcon color="#FFFFFF" /></span>
-            <span><InstagramIcon color="#FFFFFF" /></span>
-            <span><YoutubeIcon color="#FFFFFF" /></span>
-          </div>
-        </div>
+
+          <nav className="social" aria-label="Social links">
+            <a
+              href="https://facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="social-link"
+            >
+              <FacebookIcon color="#D4002A" />
+              <span>Facebook</span>
+            </a>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+              className="social-link"
+            >
+              <TwitterIcon color="#D4002A" />
+              <span>Twitter</span>
+            </a>
+            <a
+              href="https://dribbble.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Dribbble"
+              className="social-link"
+            >
+              <DribbbleIcon color="#D4002A" />
+              <span>Dribbble</span>
+            </a>
+            <a
+              href="https://www.behance.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Behance"
+              className="social-link"
+            >
+              <BehanceIcon color="#D4002A" />
+              <span>Behance</span>
+            </a>
+          </nav>
+        </header>
+
+        {/* Main */}
+        <main className="contact-main">
+          <section className="left">
+            <h1 id="contactTitle" className="contact-title">
+              Let's Work <br />
+              Together
+            </h1>
+
+            <ul className="contacts" aria-label="Contact details">
+              <li>
+                <a href="mailto:Contact@Coffeedesign.In">
+                  Contact@Coffeedesign.In
+                </a>
+              </li>
+              <li>
+                <a href="tel:+917386091360">+91 7386091360</a>
+              </li>
+            </ul>
+          </section>
+
+          <aside className="right" aria-labelledby="quickLinksTitle">
+            <h2 id="quickLinksTitle" className="right-title">
+              Quick Links
+            </h2>
+            <ul className="links">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/services">Services</a>
+              </li>
+              <li>
+                <a href="/projects">Projects</a>
+              </li>
+              <li>
+                <a href="/contact">Contact Us</a>
+              </li>
+            </ul>
+          </aside>
+        </main>
+
+        {/* Footer */}
+        <footer className="contact-footer">
+          <small>© 2023 CoffeedesignGroup</small>
+        </footer>
       </div>
     </div>
   );
