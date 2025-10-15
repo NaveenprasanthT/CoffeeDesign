@@ -3,6 +3,8 @@ import "./styles/header-section.css";
 import { StatCard } from "../../../common/Components/StatCard";
 import logo from "../../../assets/abstract-design-icon.svg";
 import AbstractDesign from "../../../assets/abstract-design-icon.svg";
+import { ReactComponent as ImagesContainerIcon } from "../../../assets/Images-Container-icon.svg";
+import { ReactComponent as PatternIcon } from "../../../assets/Pattern.svg";
 
 export default function Hero() {
   return (
@@ -48,10 +50,19 @@ export default function Hero() {
             height={24}
             className="hero-trust-img"
           />
-          <span className="hero-trust-text">62+ Happy Customers</span>
         </div>
-
-        {/* Stats Grid */}
+      </div>
+      <div className="pattern-icon" >
+        <PatternIcon/>
+      </div>
+      <fieldset>
+        <legend>
+          {" "}
+          <span className="hero-trust-text">
+            <ImagesContainerIcon />
+            62+ Happy Customers
+          </span>
+        </legend>
         <div
           className="hero-stats-grid"
           role="list"
@@ -62,7 +73,8 @@ export default function Hero() {
           <StatCard value="12+" label="Years of experience" />
           <StatCard value="34+" label="Team members" />
         </div>
-      </div>
+      </fieldset>
+      {/* Stats Grid */}
     </section>
   );
 }

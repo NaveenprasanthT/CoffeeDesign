@@ -13,25 +13,14 @@ const Navbar = () => {
   return (
     <header className="nav-wrapper" role="banner" aria-label="Primary">
       <div className="nav-inner">
-        {/* Brand */}
-        <div className="nav-brand">
+        {/* Left: Logo */}
+        <div className="nav-left">
           <img src={logo} alt="Coffee Design logo" className="nav-logo" />
         </div>
 
-        {/* Hamburger for mobile */}
-        <button
-          className="nav-toggle"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle navigation"
-        >
-          <span className="hamburger"></span>
-          <span className="hamburger"></span>
-          <span className="hamburger"></span>
-        </button>
-
-        {/* Navigation Links */}
+        {/* Center: Navigation Links */}
         <nav
-          className={`nav-links ${isMobileMenuOpen ? "active" : ""}`}
+          className={`nav-center ${isMobileMenuOpen ? "active" : ""}`}
           aria-label="Main navigation"
         >
           <NavLink
@@ -79,14 +68,37 @@ const Navbar = () => {
           >
             Pricing
           </NavLink>
+
+          {/* Add CTA inside mobile menu */}
           <NavLink
             to="/contact"
-            className="nav-cta"
+            className="nav-cta mobile-cta"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Contact
           </NavLink>
         </nav>
+
+        {/* Right: CTA for desktop */}
+        <div className="nav-right">
+          <NavLink
+            to="/contact"
+            className="nav-cta desktop-cta"
+          >
+            Contact
+          </NavLink>
+        </div>
+
+        {/* Hamburger for mobile */}
+        <button
+          className="nav-toggle"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle navigation"
+        >
+          <span className="hamburger"></span>
+          <span className="hamburger"></span>
+          <span className="hamburger"></span>
+        </button>
       </div>
     </header>
   );

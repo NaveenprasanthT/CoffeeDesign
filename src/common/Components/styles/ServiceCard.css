@@ -1,5 +1,3 @@
-/* ServiceCard.css */
-
 .service-card {
   position: relative;
   padding: 2rem;
@@ -15,23 +13,17 @@
 
 .service-number {
   font-weight: 300;
-  font-style: Light;
   font-size: 50px;
-  line-height: 32px;
-  letter-spacing: 0%;
-  vertical-align: middle;
+  line-height: 1.2;
   color: #696969;
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
 }
 
 .service-title {
-  margin-top: 330px;
   font-weight: 600;
   font-size: 24px;
   line-height: 33.6px;
-  letter-spacing: 0%;
-  vertical-align: middle;
-  color: #02050a; /* dark color */
+  color: #02050a;
   margin: 0;
 }
 
@@ -39,8 +31,6 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
-  letter-spacing: 0%;
-  vertical-align: middle;
   color: #696969;
 }
 
@@ -55,17 +45,100 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border: 1px solid #9ca3af; /* gray */
+  border: 1px solid #9ca3af;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 .service-arrow:hover {
-  background-color: #f97316; /* brand color */
+  background-color: #f97316;
   color: #fff;
 }
 
 .border-style {
-  width:590px;
+  width: 100%;
   height: 1px;
   background-color: #02050a1a;
+  margin-top: 1rem;
+}
+
+/* ============================
+   💻 Laptop / Desktop
+============================ */
+@media (max-width: 1024px) {
+  .service-number {
+    font-size: 40px;
+  }
+
+  .service-title {
+    font-size: 22px;
+  }
+
+  .service-description {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .service-arrow {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* ============================
+   📱 Tablet
+============================ */
+@media (max-width: 768px) {
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .service-number {
+    font-size: 35px;
+  }
+
+  .service-title {
+    font-size: 20px;
+  }
+
+  .service-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .service-arrow {
+    width: 40px;
+    height: 40px;
+    top: 0.8rem;
+    right: 1.5rem;
+  }
+}
+
+/* ============================
+   📱 Mobile
+============================ */
+@media (max-width: 480px) {
+  .service-card {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .service-number {
+    font-size: 28px;
+  }
+
+  .service-title {
+    font-size: 18px;
+  }
+
+  .service-description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .service-arrow {
+    width: 35px;
+    height: 35px;
+    top: 0.5rem;
+    right: 1rem;
+  }
 }

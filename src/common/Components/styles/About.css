@@ -11,8 +11,8 @@
   background: #292929;
 }
 
+/* ================= Left Section ================= */
 .about-l {
-  /* flex: 1; */
   display: flex;
   flex-direction: column;
   padding: 9% 7%;
@@ -41,27 +41,16 @@
   width: fit-content;
   border-bottom: 1px solid white;
 }
+
 .about-l a > span {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* ================= Right Section ================= */
 .about-r {
-  flex: 1;
   position: relative;
-}
-
-.about-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: -70px;
-  right: -40px;
-}
-.about-logo {
-  position: absolute;
 }
 
 .about-bg {
@@ -97,21 +86,125 @@
   transition: transform 0.3s ease;
 }
 
-/* 🔥 Hover Effect */
 .r-title:hover {
-  background-color: #db1a1a; /* or a lighter/darker shade of your primary color */
+  background-color: #db1a1a;
   transform: scale(1.05);
 }
 
-.r-title:hover h1 {
-  transform: translateX(5px);
-}
-
+.r-title:hover h1,
 .r-title:hover .arrow-right-icon {
   transform: translateX(5px);
 }
-.arrow-02-icon{
+
+.arrow-02-icon {
   position: absolute;
   left: -150px;
   bottom: 10px;
+}
+
+/* ================= Laptop (max-width: 1200px) ================= */
+@media (max-width: 1200px) {
+  .about-l h1 {
+    font-size: 28px;
+    line-height: 120%;
+  }
+
+  .r-title {
+    left: -200px;
+  }
+
+  .r-title h1 {
+    font-size: 22px;
+  }
+
+  .about-bg {
+    right: 100px;
+  }
+
+  .arrow-02-icon {
+    left: -100px;
+  }
+}
+
+/* ================= Tablet (max-width: 1024px) ================= */
+@media (max-width: 1024px) {
+  .about-wrap {
+    height: auto;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 4% 5%;
+  }
+
+  .about-l {
+    padding: 6% 5%;
+  }
+
+  .about-l h1 {
+    font-size: 26px;
+  }
+
+  .about-r {
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-bg {
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+
+  .r-title {
+    position: relative;
+    left: 0;
+    top: 15px;
+    transform: translateX(0);
+  }
+
+  .arrow-02-icon {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+/* ================= Mobile (max-width: 600px) ================= */
+@media (max-width: 600px) {
+  .about-container {
+    margin: 2%;
+    padding: 5%;
+  }
+
+  .about-l h1 {
+    font-size: 22px;
+    line-height: 130%;
+  }
+
+  .r-title h1 {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .arrow-right-icon {
+    padding: 5px;
+  }
+
+  .about-bg img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .arrow-02-icon svg {
+    width: 60px;
+    height: auto;
+  }
 }

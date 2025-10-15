@@ -16,7 +16,7 @@ function Footer() {
         {/* Header */}
         <header className="contact-header">
           <div className="contact-brand">
-            <img src={logoImages} width={361} alt="logoImages" />
+            <img src={logoImages}  className="images-logo-images-brand" alt="logoImages" />
           </div>
 
           <nav className="social" aria-label="Social links">

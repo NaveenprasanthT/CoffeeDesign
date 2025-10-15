@@ -1,13 +1,110 @@
 .services-card-pages-main {
   margin: 5%;
 }
+
+/* Hero Image */
 .services-card-pages-images {
   width: 100%;
   max-height: 464px;
+  object-fit: cover;
+  border-radius: 8px;
 }
+
+/* Service Card Layout */
 .services-card-development {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 5%;
+  gap: 2rem;
+}
+
+/* Pillars Section */
+.pillars-section {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.pillars-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pillars-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.pillars-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* ============================
+   📱 Responsive Design
+============================ */
+
+/* 🖥️ Laptop & Tablet */
+@media (max-width: 1024px) {
+  .services-card-pages-main {
+    margin: 3%;
+  }
+
+  .services-card-development {
+    gap: 1.5rem;
+  }
+
+  .pillars-title {
+    font-size: 1.3rem;
+  }
+
+  .pillars-flex {
+    gap: 1.5rem;
+  }
+}
+
+/* 📲 Mobile Devices */
+@media (max-width: 768px) {
+  .services-card-development {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .services-card-pages-main {
+    margin: 2%;
+  }
+
+  .pillars-flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pillars-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* 📱 Small Mobile */
+@media (max-width: 480px) {
+  .services-card-pages-main {
+    margin: 1rem;
+  }
+
+  .services-card-pages-images {
+    max-height: 280px;
+  }
+
+  .pillars-title {
+    font-size: 1rem;
+  }
+
+  .pillars-flex {
+    gap: 0.8rem;
+  }
 }

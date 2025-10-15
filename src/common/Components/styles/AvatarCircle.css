@@ -4,20 +4,25 @@
   justify-content: center;
   align-items: center;
   gap: 50px;
-  overflow: auto;
+  overflow-x: auto;
   margin-top: 4%;
   padding-right: 15%;
   padding-left: 35%;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
 }
+
 .tt-team-grid::-webkit-scrollbar {
   display: none;
 }
+
 /* =============== Avatar =============== */
 .tt-avatar {
   display: grid;
   place-items: center;
   text-align: center;
   gap: 0.75rem;
+  min-width: 270px;
 }
 
 .tt-avatar-img {
@@ -36,10 +41,8 @@
 
 .tt-avatar-name {
   font-weight: 500;
-  font-style: Medium;
   font-size: 18px;
   line-height: 27px;
-  text-indent: 2px;
   letter-spacing: 0%;
   text-align: center;
 }
@@ -48,10 +51,9 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
-  text-indent: 2px;
   letter-spacing: 0%;
   text-align: center;
-  color: #454545; /* or var(--tt-muted) if you use CSS variables */
+  color: #454545;
 }
 
 /* =============== Testimonials Grid =============== */
@@ -71,5 +73,82 @@
 @media (min-width: 960px) {
   .tt-testimonial-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================= Laptop (max-width: 1200px) ================= */
+@media (max-width: 1200px) {
+  .tt-team-grid {
+    gap: 35px;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .tt-avatar-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .tt-avatar {
+    min-width: 220px;
+  }
+
+  .tt-avatar-name,
+  .tt-avatar-role {
+    font-size: 16px;
+  }
+}
+
+/* ================= Tablet (max-width: 1024px) ================= */
+@media (max-width: 1024px) {
+  .tt-team-grid {
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 25px;
+    justify-content: flex-start;
+  }
+
+  .tt-avatar-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .tt-avatar {
+    min-width: 180px;
+  }
+
+  .tt-avatar-name,
+  .tt-avatar-role {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+/* ================= Mobile (max-width: 600px) ================= */
+@media (max-width: 600px) {
+  .tt-team-grid {
+    padding: 0 5%;
+    gap: 15px;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .tt-avatar-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .tt-avatar {
+    min-width: 140px;
+  }
+
+  .tt-avatar-name {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .tt-avatar-role {
+    font-size: 13px;
+    line-height: 18px;
   }
 }

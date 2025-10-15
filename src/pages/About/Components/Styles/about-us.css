@@ -10,34 +10,50 @@
 .services-about-us-heading {
   font-weight: 400;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 28px;
   color: #626262;
 }
 
-/* ✅ Tablet */
-@media (max-width: 1024px) {
+/* 💻 Laptop (1200px and below) */
+@media (max-width: 1200px) {
   .services-about-us {
-    grid-template-columns: 1fr; /* stack in one column */
-    padding: 0 5%;
+    grid-template-columns: 55% 45%;
+    padding: 0 4%;
+    gap: 18px;
   }
 
   .services-about-us-heading {
-    padding-top: 0;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 19px;
+    line-height: 26px;
   }
 }
 
-/* ✅ Mobile */
+/* 📱 Tablet (1024px and below) */
+@media (max-width: 1024px) {
+  .services-about-us {
+    grid-template-columns: 1fr;
+    padding: 0 5%;
+    gap: 15px;
+  }
+
+  .services-about-us-heading {
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 5px;
+  }
+}
+
+/* 📲 Mobile (600px and below) */
 @media (max-width: 600px) {
   .services-about-us {
     padding: 0 3%;
     text-align: start;
+    gap: 10px;
   }
 
   .services-about-us-heading {
     font-size: 16px;
-    line-height: 20px;
-    padding-top: 10px;
+    line-height: 22px;
+    padding-top: 5px;
   }
 }

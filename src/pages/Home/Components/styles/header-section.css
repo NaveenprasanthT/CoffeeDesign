@@ -3,10 +3,10 @@
 =========================== */
 .hero-section {
   position: relative;
-  padding: 6rem 1rem;
   text-align: center;
   background-color: #fecfd8;
   overflow: visible;
+  padding-top: 100px;
 }
 
 .abstract-design-icon {
@@ -39,10 +39,16 @@
 }
 .spots-badge-bordder {
   position: absolute;
-  left: 38%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 16px;
   width: 250px;
   height: 1px;
+  left: 38%;
+  right: 50%;
   background: linear-gradient(
     to right,
     rgba(255, 255, 255, 0.1) 5%,
@@ -119,11 +125,11 @@
 .hero-btn-primary {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: #111;
+  background: linear-gradient(180deg, #ff3960 0%, #d4002a 100%);
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
-  border-radius: 8px;
+  border-radius: 30px;
   transition: background 0.3s ease;
 }
 
@@ -144,17 +150,79 @@
   display: block;
 }
 
+/* Stats Grid */
+.hero-stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+fieldset {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  padding: 0px 20px 20px 20px;
+}
+.pattern-icon {
+  position: absolute;
+  bottom: 27.2%;
+  left: 5%;
+}
+legend {
+  font-weight: bold;
+}
 .hero-trust-text {
   font-size: 0.95rem;
   color: #444;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0px 2px 3px 0px #b7b7b740;
+  border: 1px solid #ffffff;
+  backdrop-filter: blur(5px);
+  background: rgba(255, 235, 239, 0.85);
+  padding: 0px 10px;
+  border-radius: 30px;
 }
 
-/* Stats Grid */
-.hero-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+.stat-card {
+  width: 250px;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    linear-gradient(
+      180deg,
+      rgba(242, 231, 254, 0.5) -35.33%,
+      rgba(238, 231, 254, 0.5) 46.23%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 12px;
+}
+.stat-value {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 50px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #1a1a1a;
+}
+.stat-label {
+  color: #4d4d4d;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
 }
 
 /* ===========================

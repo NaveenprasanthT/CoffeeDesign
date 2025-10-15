@@ -7,17 +7,24 @@
   gap: 1rem;
   grid-template-columns: 1fr;
   padding: 0px 10%;
+  box-sizing: border-box;
 }
 
+/* Tablet: 2 cards per row */
 @media (min-width: 640px) {
   .tt-testimonial-grid {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0px 8%;
+    gap: 1.5rem;
   }
 }
 
+/* Desktop: 3 cards per row */
 @media (min-width: 960px) {
   .tt-testimonial-grid {
     grid-template-columns: repeat(3, 1fr);
+    padding: 0px 5%;
+    gap: 2rem;
   }
 }
 
@@ -32,6 +39,12 @@
   display: grid;
   align-content: start;
   gap: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tt-quote-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .tt-quote-icon {
@@ -45,10 +58,10 @@
   font-size: 16px;
   line-height: 32.4px;
   letter-spacing: -0.63px;
-  vertical-align: middle;
   color: #413d45; /* near black */
 }
 
+/* Footer / Author */
 .tt-quote-footer {
   display: flex;
   align-items: center;
@@ -60,7 +73,53 @@
   font-style: Medium;
   font-size: 11.7px;
   line-height: 16.2px;
-  letter-spacing: -0.13px;
-  vertical-align: middle;
   color: #67646a; /* near black */
+}
+
+/* ============================= */
+/* Tablet */
+@media (max-width: 768px) {
+  .tt-quote-card {
+    padding: 1.2rem;
+    min-height: 200px;
+  }
+
+  .tt-quote-text {
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+  .tt-quote-author {
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
+
+/* ============================= */
+/* Mobile */
+@media (max-width: 480px) {
+  .tt-testimonial-grid {
+    padding: 0px 5%;
+    gap: 1rem;
+  }
+
+  .tt-quote-card {
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .tt-quote-text {
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+  }
+
+  .tt-quote-footer {
+    justify-content: center;
+  }
+
+  .tt-quote-author {
+    font-size: 10px;
+    line-height: 14px;
+  }
 }
