@@ -1,10 +1,5 @@
 import React from "react";
-import FAQ from "../../common/Components/faq";
 import HeaderSection from "./Components/HeaderSection";
-import HeaderSections from "./Components/HeaderSections";
-import Services from "../../common/Components/Services";
-import Aboutus from "../../common/Components/Aboutus";
-import Card from "../../common/Components/Card";
 import MediaShowcase from "./Components/MediaShowcase";
 import { AboutIntro } from "./Components/AboutIntro";
 import ServicesSection from "./Components/ServicesSection ";

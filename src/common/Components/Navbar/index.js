@@ -1,17 +1,41 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import "./navbar.css";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation(); // ✅ get current path
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  const isHomePage = location.pathname === "/";
 
+  useEffect(() => {
+    if (!isHomePage) return; // only apply scroll effect on home page
+
+    const handleScroll = () => {
+      if (window.scrollY > 320) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isHomePage]);
   return (
-    <header className="nav-wrapper" role="banner" aria-label="Primary">
+    <header
+      className={`nav-wrapper ${
+        isHomePage ? (isScrolled ? "" : "home-bg") : ""
+      }`}
+      role="banner"
+      aria-label="Primary"
+    >
       <div className="nav-inner">
         {/* Left: Logo */}
         <div className="nav-left">
@@ -81,10 +105,7 @@ const Navbar = () => {
 
         {/* Right: CTA for desktop */}
         <div className="nav-right">
-          <NavLink
-            to="/contact"
-            className="nav-cta desktop-cta"
-          >
+          <NavLink to="/contact" className="nav-cta desktop-cta">
             Contact
           </NavLink>
         </div>
