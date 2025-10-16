@@ -25,23 +25,7 @@
   text-align: center;
 }
 
-.pillars-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
-.pillars-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.pillars-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
 
 /* ============================
    📱 Responsive Design
@@ -57,13 +41,7 @@
     gap: 1.5rem;
   }
 
-  .pillars-title {
-    font-size: 1.3rem;
-  }
-
-  .pillars-flex {
-    gap: 1.5rem;
-  }
+ 
 }
 
 /* 📲 Mobile Devices */
@@ -80,14 +58,6 @@
     margin: 2%;
   }
 
-  .pillars-flex {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .pillars-title {
-    font-size: 1.2rem;
-  }
 }
 
 /* 📱 Small Mobile */
@@ -98,13 +68,5 @@
 
   .services-card-pages-images {
     max-height: 280px;
-  }
-
-  .pillars-title {
-    font-size: 1rem;
-  }
-
-  .pillars-flex {
-    gap: 0.8rem;
   }
 }

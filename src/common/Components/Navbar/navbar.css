@@ -6,7 +6,7 @@
   justify-content: center;
   padding: 0 16px;
   z-index: 9999;
-  background-color: transparent; 
+  background-color: transparent;
   transition: background-color 0.3s ease;
 }
 .nav-wrapper.home-bg {
@@ -52,10 +52,26 @@
   padding: 7px 14px;
   border-radius: 50px;
   transition: all 0.2s ease;
+  position: relative;
 }
 
 .nav-link:hover {
   background: #f1f5f9;
+}
+.nav-link-border {
+  height: 2px;
+  min-width: 38px;
+  background-color: transparent;
+  position:absolute;
+  margin: 0 auto;
+  border-radius: 50px;
+  transition: background-color 0.2s ease;
+  bottom: -2%;
+  left: 22%;
+}
+
+.nav-link-border.border-active {
+  background-color: red;
 }
 
 .nav-link.active {

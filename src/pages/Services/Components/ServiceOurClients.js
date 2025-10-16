@@ -27,8 +27,8 @@ function ServiceOurClients() {
       <div className="services-our-clients-about-us">
         <CreativeDesignSection
           icon={<AboutUsIcon />}
-          title="What We Do Our Projects"
-          heading="Creative Design Agency to provide solutions"
+          title="Testimonials"
+          heading="What Our Clients Say"
           align="start"
         />{" "}
         <img src={laptopImages} alt="" />

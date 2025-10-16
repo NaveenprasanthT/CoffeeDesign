@@ -12,7 +12,10 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
   const isHomePage = location.pathname === "/";
-
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   useEffect(() => {
     if (!isHomePage) return; // only apply scroll effect on home page
 
@@ -28,6 +31,7 @@ const Navbar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHomePage]);
+
   return (
     <header
       className={`nav-wrapper ${
@@ -54,8 +58,18 @@ const Navbar = () => {
             }
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Home
+            {({ isActive }) => (
+              <>
+                Home
+                <div
+                  className={`nav-link-border ${
+                    isActive ? "border-active" : ""
+                  }`}
+                ></div>
+              </>
+            )}
           </NavLink>
+
           <NavLink
             to="/works"
             className={({ isActive }) =>
@@ -63,7 +77,16 @@ const Navbar = () => {
             }
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Works
+             {({ isActive }) => (
+              <>
+                Works
+                <div
+                  className={`nav-link-border ${
+                    isActive ? "border-active" : ""
+                  }`}
+                ></div>
+              </>
+            )}
           </NavLink>
           <NavLink
             to="/about"
@@ -72,7 +95,16 @@ const Navbar = () => {
             }
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            About
+              {({ isActive }) => (
+              <>
+                About
+                <div
+                  className={`nav-link-border ${
+                    isActive ? "border-active" : ""
+                  }`}
+                ></div>
+              </>
+            )}
           </NavLink>
           <NavLink
             to="/services"
@@ -81,7 +113,16 @@ const Navbar = () => {
             }
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Services
+              {({ isActive }) => (
+              <>
+                Service
+                <div
+                  className={`nav-link-border ${
+                    isActive ? "border-active" : ""
+                  }`}
+                ></div>
+              </>
+            )}
           </NavLink>
           <NavLink
             to="/pricing"
@@ -90,7 +131,16 @@ const Navbar = () => {
             }
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Pricing
+              {({ isActive }) => (
+              <>
+                Pricing
+                <div
+                  className={`nav-link-border ${
+                    isActive ? "border-active" : ""
+                  }`}
+                ></div>
+              </>
+            )}
           </NavLink>
 
           {/* Add CTA inside mobile menu */}
@@ -100,6 +150,13 @@ const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Contact
+            <div
+              className={({ isActive }) =>
+                isActive ? "nav-link-border border-active" : ""
+              }
+            >
+              {" "}
+            </div>{" "}
           </NavLink>
         </nav>
 
@@ -107,6 +164,13 @@ const Navbar = () => {
         <div className="nav-right">
           <NavLink to="/contact" className="nav-cta desktop-cta">
             Contact
+            <div
+              className={({ isActive }) =>
+                isActive ? "nav-link-border border-active" : ""
+              }
+            >
+              {" "}
+            </div>{" "}
           </NavLink>
         </div>
 
