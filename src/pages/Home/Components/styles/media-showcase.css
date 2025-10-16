@@ -1,31 +1,37 @@
 .media-showcase {
   text-align: center;
   font-weight: 500;
-  font-style: normal; /* "Medium" is not valid; use normal, italic, or oblique */
+  font-style: normal;
   letter-spacing: 0;
   background: radial-gradient(
     ellipse 100% 20% at top center,
     rgba(254, 207, 216, 1) 50%,
-    rgba(254, 207, 216, 0) 100% /* fully transparent at bottom */
+    rgba(254, 207, 216, 0) 100%
   );
+  padding: 40px 0;
 }
 
+/* ========================== */
+/* Video Container */
+/* ========================== */
 .showcase-video-container {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   width: 90%;
+  max-width: 1200px;
   height: 575px;
-  opacity: 1;
-  border-radius: 20px;
+  margin: 0 auto;
 }
 
 .hero-image {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  border-radius: 16px;
+  border-radius: 20px;
 }
 
 .play-button {
@@ -36,8 +42,8 @@
   background: white;
   color: #0077ff;
   border-radius: 50%;
-  padding: 10px 10px 5px 15px;
-  font-size: 20px;
+  padding: 12px 14px;
+  font-size: 24px;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -49,17 +55,20 @@
   color: white;
 }
 
+/* ========================== */
+/* Trusted Text */
+/* ========================== */
 .trusted-text {
   font-weight: 500;
-  font-style: Medium;
   font-size: 17px;
-  line-height: 150%;
-  letter-spacing: 0%;
-  text-align: center;
-  color: #333333;
-  margin: 20px 0px;
+  line-height: 1.5;
+  color: #333;
+  margin: 20px 0;
 }
 
+/* ========================== */
+/* Brands Section */
+/* ========================== */
 .brands {
   margin-top: 16px;
   display: flex;
@@ -69,11 +78,13 @@
   font-weight: 500;
   color: #3d3d3d;
 }
+
 .brands-content {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
+
 .brands-icon {
   width: 28px;
   height: 28px;
@@ -85,12 +96,16 @@
   margin-left: 20px;
   background-color: #ccc;
 }
+
+/* ========================== */
+/* Ratings Section */
+/* ========================== */
 .ratings {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-  gap: 50px;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
@@ -114,33 +129,91 @@
 .rating-stars {
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: 4px;
   border: 1px solid #f6f7f9;
   border-radius: 12px;
   padding-left: 10px;
 }
 
-.rating-count {
-  font-weight: 600;
-  font-style: SemiBold;
-  font-size: 15px;
-  line-height: 150%;
-  letter-spacing: 0%;
-  color: #666666;
-  background: #f6f7f9;
-  padding: 3px 10px;
-  border-radius: 12px;
-  border: 1px solid #f6f7f9;
-  outline: 1px solid #f6f7f9;
-}
 .rating-number {
   margin-left: 5px;
   font-weight: 600;
   color: #222;
 }
 
+.rating-count {
+  font-weight: 600;
+  font-size: 14px;
+  color: #666;
+  background: #f6f7f9;
+  padding: 3px 8px;
+  border-radius: 12px;
+  border: 1px solid #f6f7f9;
+}
+
 .rating-subtext {
   display: block;
-  font-size: 13px;
+  font-size: 12px;
   color: #666;
+}
+
+/* ========================== */
+/* Tablet */
+@media (max-width: 960px) {
+  .showcase-video-container {
+    height: 450px;
+  }
+  .play-button {
+    font-size: 20px;
+    padding: 10px 12px;
+  }
+  .trusted-text {
+    font-size: 16px;
+  }
+  .brands {
+    gap: 20px;
+  }
+  .ratings {
+    gap: 20px;
+  }
+}
+
+/* ========================== */
+/* Mobile */
+@media (max-width: 480px) {
+  .showcase-video-container {
+    height: 300px;
+  }
+  .play-button {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+  .trusted-text {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  .brands {
+    gap: 15px;
+    flex-direction: column;
+    place-content: center;
+  }
+  .brands-content {
+    gap: 4px;
+    font-size: 14px;
+  }
+  .ratings {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .rating-info {
+    text-align: center;
+  }
+  .rating-subtext {
+    font-size: 11px;
+  }
+  .rating-count {
+    font-size: 12px;
+    padding: 2px 6px;
+  }
+  .brands-border{display: none;}
 }

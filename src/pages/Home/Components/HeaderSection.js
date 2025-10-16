@@ -3,6 +3,12 @@ import "./styles/header-section.css";
 import { StatCard } from "../../../common/Components/StatCard";
 import logo from "../../../assets/abstract-design-icon.svg";
 import AbstractDesign from "../../../assets/abstract-design-icon.svg";
+import { ReactComponent as ImagesContainerIcon } from "../../../assets/Images-Container-icon.svg";
+import { ReactComponent as PatternIcon } from "../../../assets/Pattern.svg";
+import { ReactComponent as ShapeIcon } from "../../../assets/Shape-right-Abstract-Design.svg";
+import { ReactComponent as ShapeLeftIcon } from "../../../assets/Shape-Abstract-Design.svg";
+import { ReactComponent as AbstractRightIcon } from "../../../assets/Abstract-Design-right.svg";
+import { ReactComponent as AbstractLefttIcon } from "../../../assets/Abstract-Design-left.svg";
 
 export default function Hero() {
   return (
@@ -48,10 +54,33 @@ export default function Hero() {
             height={24}
             className="hero-trust-img"
           />
-          <span className="hero-trust-text">62+ Happy Customers</span>
         </div>
+      </div>
+      <div className="shope-icon-right">
+        <ShapeIcon />
+      </div>
+      <div className="shope-icon-left">
+        <ShapeLeftIcon />
+      </div>
 
-        {/* Stats Grid */}
+      <fieldset>
+        <div className="pattern-icon">
+          <PatternIcon style={{ width: "100%" }} />
+        </div>
+        <legend>
+          {" "}
+          <span className="hero-trust-text">
+            {" "}
+            <span className="shopev2-icon-left">
+              <AbstractLefttIcon />
+            </span>
+            <ImagesContainerIcon />
+            62+ Happy Customers{" "}
+            <span className="shopev2-icon">
+              <AbstractRightIcon />
+            </span>
+          </span>
+        </legend>
         <div
           className="hero-stats-grid"
           role="list"
@@ -62,7 +91,8 @@ export default function Hero() {
           <StatCard value="12+" label="Years of experience" />
           <StatCard value="34+" label="Team members" />
         </div>
-      </div>
+      </fieldset>
+      {/* Stats Grid */}
     </section>
   );
 }

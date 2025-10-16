@@ -25,7 +25,7 @@ function CreativeDesign() {
     <>
       <CreativeDesignSection
         icon={<AboutUsIcon />}
-        title="What We Do Our Projects"
+        title="Popular services"
         heading="Creative Design Agency to provide solutions"
         description="Our belief system says that effective design"
       />

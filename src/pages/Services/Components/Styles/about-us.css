@@ -15,11 +15,27 @@
   padding-top: 17%;
 }
 
-/* ✅ Tablet */
+/* 💻 Laptop (1200px and below) */
+@media (max-width: 1200px) {
+  .services-about-us {
+    grid-template-columns: 55% 45%; /* slightly closer split */
+    padding: 0 4%;
+    gap: 15px;
+  }
+
+  .services-about-us-heading {
+    font-size: 19px;
+    line-height: 23px;
+    padding-top: 10%;
+  }
+}
+
+/* 📱 Tablet (1024px and below) */
 @media (max-width: 1024px) {
   .services-about-us {
     grid-template-columns: 1fr; /* stack in one column */
     padding: 0 5%;
+    text-align: start;
   }
 
   .services-about-us-heading {
@@ -29,11 +45,12 @@
   }
 }
 
-/* ✅ Mobile */
+/* 📲 Mobile (600px and below) */
 @media (max-width: 600px) {
   .services-about-us {
     padding: 0 3%;
     text-align: start;
+    gap: 10px;
   }
 
   .services-about-us-heading {

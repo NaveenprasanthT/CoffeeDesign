@@ -5,9 +5,42 @@
   border-radius: 12px;
 }
 
-.services-our-clients-about-us{
-    display: flex;
-    justify-content: space-between;
+.services-our-clients-about-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  gap: 20px; /* space between text and image */
+}
+
+.services-our-clients-about-us img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* ✅ Responsive for tablets & mobile */
+@media (max-width: 1024px) {
+  .services-our-clients-about-us img {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-our-clients-about-us {
+    flex-direction: column; /* stack content */
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .services-our-clients-about-us img {
+    max-width: 100%; /* full width image on mobile */
+    margin-top: 20px;
+  }
+
+  .services-our-clients-about-us .creative-design-section {
+    text-align: center;
     align-items: center;
-    padding-right: 20px;
+  }
 }

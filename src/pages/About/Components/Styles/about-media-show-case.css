@@ -1,23 +1,25 @@
 .about-showcase-video-main {
   text-align: center;
   font-weight: 500;
-  font-style: normal; /* "Medium" is not valid; use normal, italic, or oblique */
   letter-spacing: 0;
+  margin-top: 5%;
 }
+
 .about-showcase-video-container {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   width: 90%;
   height: 575px;
   opacity: 1;
-  border-radius: 20px;
 }
 
 .about-hero-image {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
   border-radius: 16px;
 }
@@ -27,14 +29,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.6); /* semi-transparent background */
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
-
   color: #ca0515;
   border-radius: 50%;
-  padding: 10px 10px 5px 15px;
-  font-size: 20px;
+  padding: 10px 15px 10px 20px;
+  font-size: 32px;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -53,6 +54,64 @@
   font-size: 22px;
   line-height: 130%;
   letter-spacing: 0%;
-  text-align: justify;
   color: #505050;
+}
+
+/* 💻 Laptop (1200px and below) */
+@media (max-width: 1200px) {
+  .about-showcase-video-container {
+    height: 500px;
+    width: 90%;
+  }
+
+  .about-play-button {
+    font-size: 28px;
+    padding: 10px 15px 10px 20px;
+  }
+
+  .about-coffee-text {
+    font-size: 20px;
+  }
+}
+
+/* 📱 Tablet (1024px and below) */
+@media (max-width: 1024px) {
+  .about-showcase-video-container {
+    height: 420px;
+    width: 95%;
+  }
+
+  .about-play-button {
+    font-size: 24px;
+    padding: 8px 12px 8px 17px;
+  }
+
+  .about-coffee-text {
+    font-size: 18px;
+    margin: 3% 5%;
+  }
+}
+
+/* 📲 Mobile (600px and below) */
+@media (max-width: 600px) {
+  .about-showcase-video-container {
+    height: 280px;
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .about-hero-image {
+    border-radius: 12px;
+  }
+
+  .about-play-button {
+    font-size: 20px;
+    padding: 5px 9px 5px 14px;
+  }
+
+  .about-coffee-text {
+    font-size: 16px;
+    line-height: 140%;
+    margin: 5% 6%;
+  }
 }

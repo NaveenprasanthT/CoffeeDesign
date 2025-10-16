@@ -1,6 +1,7 @@
 .sectionWrap {
   margin: 2% 0 0;
 }
+
 :root {
   --bg: #ffffff;
   --grid: rgba(0, 0, 0, 0.05);
@@ -9,7 +10,9 @@
   --brand: #e44c5c;
 }
 
-/* Background with radial glow & grid lines */
+/* ===========================
+   Main Footer Container
+=========================== */
 .contact-wrap {
   position: relative;
   background-color: var(--bg);
@@ -46,7 +49,7 @@
 .social {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
   gap: 100px;
   flex-wrap: wrap;
 }
@@ -57,11 +60,9 @@
   gap: 6px;
   color: var(--muted);
   text-decoration: none;
-  font-weight: weight/400;
-  font-size: font size/16;
-  line-height: line height/32;
-  letter-spacing: 0%;
-  vertical-align: middle;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
   text-transform: capitalize;
   color: #02050a;
 }
@@ -81,20 +82,12 @@
   margin-top: clamp(24px, 6vw, 80px);
 }
 
-@media (max-width: 900px) {
-  .contact-main {
-    grid-template-columns: 1fr;
-  }
-  .social {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    gap: 10px;
-    flex-wrap: wrap-reverse;
-  }
+.images-logo-images-brand {
+  width: 361px;
 }
-
-/* Left Section */
+/* ===========================
+   Left Section
+=========================== */
 .contact-title {
   font-size: clamp(40px, 7vw, 76px);
   line-height: 0.95;
@@ -121,13 +114,13 @@
   text-decoration: underline;
 }
 
-/* Right Section */
+/* ===========================
+   Right Section
+=========================== */
 .right-title {
   font-weight: 600;
   font-size: 36px;
   line-height: 100%;
-  letter-spacing: 0%;
-  vertical-align: middle;
   margin: 0 0 14px;
   color: #121212;
 }
@@ -145,11 +138,8 @@
   color: var(--muted);
   text-decoration: none;
   font-weight: 500;
-  font-style: Medium;
   font-size: 20px;
   line-height: 100%;
-  letter-spacing: 0%;
-  vertical-align: middle;
   text-transform: capitalize;
 }
 
@@ -159,7 +149,7 @@
 }
 
 /* ===========================
-   Footer
+   Footer Bottom Text
 =========================== */
 .contact-footer {
   display: flex;
@@ -168,11 +158,132 @@
   color: var(--muted);
   font-size: 12px;
   position: absolute;
-  right:10%;
+  right: 10%;
   bottom: 10%;
   font-weight: 400;
   font-size: 24px;
   line-height: 100%;
   letter-spacing: 0px;
   text-align: center;
+}
+
+/* 💻 Laptop (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .images-logo-images-brand {
+    width: 310px;
+  }
+  .social {
+    gap: 40px;
+  }
+
+  .contact-main {
+    gap: 40px;
+  }
+
+  .right-title {
+    font-size: 28px;
+  }
+
+  .links a {
+    font-size: 18px;
+  }
+
+  .contact-footer {
+    font-size: 20px;
+    right: 5%;
+  }
+}
+
+/* 📱 Tablet (max-width: 900px) */
+@media (max-width: 900px) {
+  .images-logo-images-brand {
+    width: 300px;
+  }
+  .contact-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .social {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .contact-main {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .contact-title {
+    font-size: 48px;
+  }
+
+  .right-title {
+    font-size: 26px;
+  }
+
+  .links a {
+    font-size: 18px;
+  }
+
+  .contact-footer {
+    font-size: 18px;
+    right: 5%;
+  }
+}
+
+/* 📲 Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .images-logo-images-brand {
+    width: 260px;
+  }
+  .contact-wrap {
+    padding: 8% 5% 20% 5%;
+  }
+
+  .social {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .social-link span {
+    display: none; /* Only show icon on mobile */
+  }
+
+  .contact-title {
+    font-size: 36px;
+  }
+
+  .contacts {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contacts a {
+    font-size: 16px;
+  }
+
+  .right-title {
+    font-size: 22px;
+  }
+
+  .links {
+    gap: 12px;
+  }
+
+  .links a {
+    font-size: 16px;
+  }
+
+  .contact-footer {
+    font-size: 14px;
+    right: 0;
+    bottom: 5%;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    text-align: center;
+  }
 }

@@ -9,14 +9,12 @@ const Aboutus = () => {
     <div className="about-wrap">
       <div className="about-container">
         <div className="about-l">
-          <h1>
-            Passionate about <span>design</span> & <span>development,</span> we
-            craft innovative solutions that bring ideas to life. Welcome to
-            creativity redefined.
-          </h1>
+          <h1>Let's create something extraordinary together.</h1>
         </div>
         <div className="about-r">
-         <div className="arrow-02-icon"> <Arrow02 />
+          <div className="arrow-02-icon">
+            {" "}
+            <Arrow02 />
           </div>
           <div className="about-bg">
             <img src={about} alt="about-us icon" />

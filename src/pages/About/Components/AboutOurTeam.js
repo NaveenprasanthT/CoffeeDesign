@@ -15,7 +15,7 @@ function AboutOurTeam() {
     <>
       <CreativeDesignSection
         icon={<AboutUsIcon />}
-        title="What We Do Our Projects"
+        title="Our Team"
         heading="Our Team Curating Excellence from Creativity."
       />{" "}
       <div className="tt-team-grid">

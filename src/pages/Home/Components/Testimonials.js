@@ -25,9 +25,8 @@ function Testimonials() {
     <div>
       <CreativeDesignSection
         icon={<AboutUsIcon />}
-        title="What We Do Our Projects"
-        heading="Creative Design Agency to provide solutions"
-        align="start"
+        title="Testimonials"
+        heading="What Our Clients Say"
       />{" "}
       <div className="tt-testimonial-grid">
         {testimonials.map((t, i) => (

@@ -1,25 +1,41 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import "./Styles/contact-form.css"; // import the plain CSS file
+import emailjs from "@emailjs/browser";
 
 export default function ContactForm({
   onSubmit,
   buttonText = "Leave us a message",
 }) {
+  const formRef = useRef();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries());
-    if (onSubmit) {
-      onSubmit(data);
-    } else {
-      console.log("[Contact Form Submitted]", data);
-    }
-    e.currentTarget.reset();
+
+    // EmailJS send
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID", // 👈 replace with your Service ID
+        "YOUR_TEMPLATE_ID", // 👈 replace with your Template ID
+        formRef.current,
+        "YOUR_PUBLIC_KEY" // 👈 replace with your Public Key
+      )
+      .then(
+        (result) => {
+          console.log("✅ Email sent successfully!", result.text);
+          alert("Your message has been sent successfully!");
+          formRef.current.reset();
+        },
+        (error) => {
+          console.error("❌ Email send error:", error.text);
+          alert("Failed to send the message. Please try again.");
+        }
+      );
   };
 
   return (
     <form
+      ref={formRef}
       className="contact-form"
       onSubmit={handleSubmit}
       aria-label="Contact form"
@@ -34,7 +50,6 @@ export default function ContactForm({
             type="text"
             id="name"
             name="name"
-            placeholder=""
             required
           />
         </div>
