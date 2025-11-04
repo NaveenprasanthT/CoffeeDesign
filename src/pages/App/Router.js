@@ -6,6 +6,7 @@ import Footer from "../../common/Footer";
 import ServicesPages from "../Services";
 import AboutPages from "../About";
 import ContactPage from "../Contact";
+import Showcasing from "../Home/Components/Showcasing";
 
 function WrapperRoutes() {
   return (
@@ -25,7 +26,7 @@ function Router() {
         <Route path="about" element={<AboutPages />} />
         <Route path="services" element={<ServicesPages />} />
         <Route path="contact" element={<ContactPage />} />
-        
+        <Route path="works" element={<Showcasing />} />
       </Route>
     </Routes>
   );

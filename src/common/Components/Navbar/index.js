@@ -124,25 +124,7 @@ const Navbar = () => {
               </>
             )}
           </NavLink>
-          <NavLink
-            to="/pricing"
-            className={({ isActive }) =>
-              isActive ? "nav-link active" : "nav-link"
-            }
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-              {({ isActive }) => (
-              <>
-                Pricing
-                <div
-                  className={`nav-link-border ${
-                    isActive ? "border-active" : ""
-                  }`}
-                ></div>
-              </>
-            )}
-          </NavLink>
-
+      
           {/* Add CTA inside mobile menu */}
           <NavLink
             to="/contact"
