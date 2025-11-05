@@ -77,9 +77,15 @@
   align-items: center;
   justify-content: center;
 }
-.logo-arrow-right{
 
-}
 .logo-brand-arrow-btn:hover {
   background: #000;
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+.logo-arrow-right{
+  width: 30px;
+  
+}
 }

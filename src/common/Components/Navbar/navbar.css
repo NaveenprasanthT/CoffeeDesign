@@ -1,11 +1,12 @@
 .nav-wrapper {
   position: sticky;
-  top: 12px;
+  top: 1px;
   z-index: 40;
   display: flex;
   justify-content: center;
   padding: 0 16px;
   z-index: 9999;
+  padding-top: 14px;
   background-color: transparent;
   transition: background-color 0.3s ease;
 }
@@ -42,7 +43,7 @@
   display: flex;
   gap: 14px;
   align-items: center;
-  background-color: transparent;
+  background-color:none;
 }
 
 .nav-link {
@@ -62,7 +63,7 @@
   height: 2px;
   min-width: 38px;
   background-color: transparent;
-  position:absolute;
+  position: absolute;
   margin: 0 auto;
   border-radius: 50px;
   transition: background-color 0.2s ease;
@@ -131,10 +132,10 @@
     position: absolute;
     top: 72px;
     right: 0%;
-    transform: translateX(-50%);
+    transform: translateX(-10%);
     flex-direction: column;
-    background: rgba(255, 235, 239, 0.95);
-    backdrop-filter: blur(10px);
+    background: #fecfd8;
+    backdrop-filter: none;
     padding: 16px;
     border-radius: 16px;
     gap: 12px;
@@ -143,6 +144,7 @@
 
   .nav-center.active {
     display: flex;
+    background: #fecfd8;
   }
 
   .nav-toggle {
