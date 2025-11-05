@@ -77,7 +77,7 @@ const Navbar = () => {
             }
             onClick={() => setIsMobileMenuOpen(false)}
           >
-             {({ isActive }) => (
+            {({ isActive }) => (
               <>
                 Works
                 <div
@@ -95,7 +95,7 @@ const Navbar = () => {
             }
             onClick={() => setIsMobileMenuOpen(false)}
           >
-              {({ isActive }) => (
+            {({ isActive }) => (
               <>
                 About
                 <div
@@ -113,7 +113,7 @@ const Navbar = () => {
             }
             onClick={() => setIsMobileMenuOpen(false)}
           >
-              {({ isActive }) => (
+            {({ isActive }) => (
               <>
                 Service
                 <div
@@ -124,7 +124,7 @@ const Navbar = () => {
               </>
             )}
           </NavLink>
-      
+
           {/* Add CTA inside mobile menu */}
           <NavLink
             to="/contact"
@@ -158,7 +158,7 @@ const Navbar = () => {
 
         {/* Hamburger for mobile */}
         <button
-          className="nav-toggle"
+          className={`nav-toggle ${isMobileMenuOpen ? "active" : ""}`}
           onClick={toggleMobileMenu}
           aria-label="Toggle navigation"
         >
